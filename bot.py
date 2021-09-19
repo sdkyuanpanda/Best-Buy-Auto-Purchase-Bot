@@ -22,7 +22,7 @@ def gtcBtnwtime():
     gtcBtn = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, ".go-to-cart-button"))
     )
-
+#add your own links and remove some if neccessary, remember more links = slower scanning (this is not webscraper, webscraper will come out as v2)
 RTX3070LINKS = [
         "https://www.bestbuy.com/site/nvidia-geforce-rtx-3070-8gb-gddr6-pci-express-4-0-graphics-card-dark-platinum-and-black/6429442.p?skuId=6429442",
         "https://www.bestbuy.com/site/gigabyte-nvidia-geforce-rtx-3070-eagle-8gb-gddr6-pci-express-4-0-graphics-card/6437912.p?skuId=6437912",
@@ -106,7 +106,7 @@ while not isComplete:
                         
         
         if "atc1500" in atcList or "gtc1500" in atcList:
-            # go to cart and begin checkout as guest
+            # go to cart and begin checkout
 #Try using XPATH
 #        checkoutBtn = WebDriverWait(driver, 10).until(
 #            EC.presence_of_element_located((By.XPATH, "/html/body/div[1]/main/div/div[2]/div[1]/div/div/span/div/div[2]/div[1]/section[2]/div/div/div[3]/div/div[1]/button"))
